@@ -1,3 +1,3 @@
-module ali
+module my-todo-api
 
 go 1.22.2
