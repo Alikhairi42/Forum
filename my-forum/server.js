@@ -37,7 +37,7 @@ app.set("views", path.join(__dirname, "views"));
 
 //ROUTES
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Forum Home',
+    res.render('home', { title: 'Forum Home',
                     message: 'welcome to the forum' });   
 });
 
