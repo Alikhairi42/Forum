@@ -220,3 +220,163 @@ footer {
     color: #3c3;
     border: 1px solid #cfc;
 }
+/* Post Detail */
+.post-detail {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.post-header h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.post-content {
+    padding: 2rem 0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Reactions */
+.reactions {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.reaction-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.reaction-btn:hover {
+    background: #f8f8f8;
+    transform: translateY(-2px);
+}
+
+.reaction-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.reaction-btn-small {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    transition: all 0.2s;
+}
+
+.reaction-btn-small:hover {
+    background: #f0f0f0;
+}
+
+/* Comments */
+.comments-section {
+    margin-top: 3rem;
+}
+
+.comments-section h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.comment-form {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
+
+.comment {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.comment-date {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.comment-content {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.comment-reactions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 2rem;
+    color: #999;
+}
+
+.login-prompt {
+    text-align: center;
+    padding: 1rem;
+    background: #fff3cd;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.login-prompt a {
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Delete Button */
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* My Posts */
+.my-posts {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}

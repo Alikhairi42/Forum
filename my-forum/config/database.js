@@ -68,6 +68,24 @@ db.serialize(() => {
         if (err) console.error('Error creating sessions table:', err);
         else console.log('✅ Sessions table ready');
     });
+    // Add this table creation (already in previous code)
+    db.run(`
+    CREATE TABLE IF NOT EXISTS reactions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        post_id INTEGER,
+        comment_id INTEGER,
+        type TEXT CHECK(type IN ('like', 'dislike')),
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(id),
+        FOREIGN KEY (post_id) REFERENCES posts(id),
+        FOREIGN KEY (comment_id) REFERENCES comments(id),
+        UNIQUE(user_id, post_id, comment_id)
+    )
+`, (err) => {
+    if (err) console.error('Error creating reactions table:', err);
+    else console.log('✅ Reactions table ready');
+});
 });
 
 // Export database
