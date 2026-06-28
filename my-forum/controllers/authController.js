@@ -22,7 +22,7 @@ exports.handleRegister = async (req, res) => {
         return res.render("register", { title: "Register" ,error: "Password must be at least 6 characters"});
     }
     try {
-        await User.create({ username, email, password });
+        await User.create(username, email, password);
         res.redirect('/auth/login?registered=true');
     } catch (error) {
         console.error(error);
@@ -50,7 +50,7 @@ exports.handleLogin = async (req, res) => {
         if(!user) {
             return res.render("login", { title: "Login" ,error: "Invalid email or password", success: null });
         }
-        const isMatch = await user.comparePassword(password);
+        const isMatch = await User.verifyPassword(password, user.password);
         if(!isMatch) {
             return res.render("login", { title: "Login" ,error: "Invalid email or password", success: null });
         }
@@ -93,7 +93,6 @@ exports.logout = (req, res) => {
     const sessionId = req.session.sessionId;
 
     if (sessionId) {
-        // Delete from database
         db.run('DELETE FROM sessions WHERE id = ?', [sessionId], (err) => {
             if (err) console.error('Session deletion error:', err);
         });
