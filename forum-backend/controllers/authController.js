@@ -16,12 +16,12 @@ exports.register = async(req, res) => {
         }
 
         const hashPass = await bcrypt.hash(password, 10);
-
+        // console.log(hashPass);
         const newUser = await prisma.user.create({
             data: {
                 username: username,
                 email: email,
-                password: password,
+                password: hashPass, //hena fin kan mshkile
             }
         });
         res.status(201).json({
@@ -45,10 +45,12 @@ exports.login = async(req, res) => {
         const user = await prisma.user.findUnique({
             where: { email, email }
         });
-        if (user)
+        if (!user)
             return res.status(404).json({ message: "This is email not found" });
-
         const passvalid = await bcrypt.compare(password, user.password);
+        // console.log("log : dyl pass valid ::",
+        //     passvalid);
+        // console.log("pass word ", password);
         if (!passvalid)
             return res.status(401).json({ message: "password is not correct" });
 

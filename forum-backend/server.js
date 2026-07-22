@@ -13,6 +13,9 @@ app.use(express.json());
 const authR = require('./routes/auth');
 app.use('/api/auth', authR)
 
+const postRouter = require('./routes/posts');
+app.use('/api/posts', postRouter);
+
 //por
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

@@ -45,3 +45,6 @@ FLUSH PRIVILEGES;
 Mli katsali ktabet `schema.prisma`, katsift code l MySQL b had l'commande:
 ```bash
 npx prisma migrate dev --name init
+
+
+npx prisma migrate dev
