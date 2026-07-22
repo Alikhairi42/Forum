@@ -49,7 +49,7 @@ model Comment {
 
 model React {
   id         Int       @id @default(autoincrement())
-  type       String    // mthlan: "LIKE", "DISLIKE"
+  type       String    // "LIKE", "DISLIKE"
   userId     Int
   postId     Int
 
