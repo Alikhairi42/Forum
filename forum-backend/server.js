@@ -18,6 +18,9 @@ app.use('/api/posts', postRouter);
 
 const commentRoutes = require('./routes/comments');
 app.use('/api/comments', commentRoutes);
+
+const reactRoutes = require('./routes/reactions');
+app.use('/api/reacts', reactRoutes);
 //por
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
