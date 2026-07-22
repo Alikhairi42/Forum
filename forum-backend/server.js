@@ -16,6 +16,8 @@ app.use('/api/auth', authR)
 const postRouter = require('./routes/posts');
 app.use('/api/posts', postRouter);
 
+const commentRoutes = require('./routes/comments');
+app.use('/api/comments', commentRoutes);
 //por
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

@@ -43,7 +43,7 @@ exports.getAllPosts = async(req, res) => {
 
 exports.deletePost = async(req, res) => {
     try {
-        const postId = parseInt(req.params.id); // parmter lkin f url id 
+        const postId = parseInt(req.params.id);
 
         const post = await prisma.post.findUnique({
             where: { id: postId }
@@ -76,14 +76,12 @@ exports.updatePost = async(req, res) => {
 
         const { title, content } = req.body;
 
-        // 1. Check if post exists
         const post = await prisma.post.findUnique({ where: { id: postId } });
 
         if (!post) {
             return res.status(404).json({ message: "Post not found" });
         }
 
-        // 2. Check ownership
         if (post.userId !== req.user.userId) {
             return res.status(403).json({ message: "Access denied. You can only update your own posts." });
         }
