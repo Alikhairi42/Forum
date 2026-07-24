@@ -1,7 +1,7 @@
 # NexusForum
 
 <p align="center">
-  <img src="https://via.placeholder.com/1200x320?text=NexusForum+Logo+Placeholder" alt="Project logo placeholder" width="1200" />
+  <img src="https://github.com/Alikhairi42/Forum/assets/logo.png" alt="NexusForum Logo" width="400" />
 </p>
 
 <p align="center">
