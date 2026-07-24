@@ -25,22 +25,6 @@ The current codebase implements the following features:
 - Responsive React UI with animated transitions
 - API base URL configuration through environment variables
 
-## Screenshots
-
-> Placeholder screenshots for the project homepage, login page, and post feed.
-
-<p align="center">
-  <img src="https://via.placeholder.com/1200x700?text=Homepage+Screenshot+Placeholder" alt="Homepage screenshot placeholder" width="1200" />
-</p>
-
-<p align="center">
-  <img src="https://via.placeholder.com/1200x700?text=Login+Page+Screenshot+Placeholder" alt="Login screenshot placeholder" width="1200" />
-</p>
-
-<p align="center">
-  <img src="https://via.placeholder.com/1200x700?text=Forum+Feed+Screenshot+Placeholder" alt="Forum feed screenshot placeholder" width="1200" />
-</p>
-
 ## Architecture
 
 The application follows a simple three-layer architecture:
