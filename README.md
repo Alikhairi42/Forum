@@ -1,26 +1,3 @@
-# NexusForum
-
-<p align="center">
-  <img src="https://github.com/Alikhairi42/Forum/assets/logo.png" alt="NexusForum Logo" width="400" />
-</p>
-
-<p align="center">
-  <a href="https://opensource.org/licenses/ISC">
-    <img alt="License" src="https://img.shields.io/badge/License-ISC-blue.svg" />
-  </a>
-  <a href="https://github.com/your-username/your-repo/stargazers">
-    <img alt="Stars" src="https://img.shields.io/github/stars/your-username/your-repo?style=for-the-badge" />
-  </a>
-  <a href="https://github.com/your-username/your-repo/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/your-username/your-repo?style=for-the-badge" />
-  </a>
-  <a href="https://github.com/your-username/your-repo/network/members">
-    <img alt="Forks" src="https://img.shields.io/github/forks/your-username/your-repo?style=for-the-badge" />
-  </a>
-</p>
-
-A modern community forum application built with a Node.js/Express backend, a React + Vite frontend, and Prisma ORM over a MySQL database. The project allows users to register, log in, create posts, comment on posts, and react to them with like/dislike actions.
-
 ## Overview
 
 NexusForum is a lightweight full-stack forum prototype designed to demonstrate a clean separation between frontend and backend responsibilities while keeping the development experience simple and beginner-friendly. The frontend is a polished single-page application with animated UI and route-based navigation, while the backend exposes a REST API for authentication, post management, comments, and reactions.
